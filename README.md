@@ -123,10 +123,13 @@ curl "http://localhost:8080/health"
 
 Test with current timestamps:
 
-# Get last 10 minutes of data
+### Get last 10 minutes of data
+```bash 
 CURRENT=$(date +%s)
 FROM=$((CURRENT - 600))
-curl "http://localhost:8080/history?symbol=BTC-USD&interval=5s&from=${FROM}&to=${CURRENT}"This queries the last 10 minutes of 5-second candles for BTC-USD using current timestamps.
+curl "http://localhost:8080/history?symbol=BTC-USD&interval=5s&from=${FROM}&to=${CURRENT}"
+```
+This queries the last 10 minutes of 5-second candles for BTC-USD using current timestamps.
 
 ## Bonus Features
 
